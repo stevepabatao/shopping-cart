@@ -24,6 +24,7 @@
     "postcss-import": "^14.0.1",
     "postcss-load-config": "^3.0.1",
     "sirv-cli": "^1.0.0",
+    "svelte-dapp": "^1.0.1",
     "svelte-preprocess": "^4.7.0",
     "tailwindcss": "^2.0.4",
     "uuid": "^8.3.2"

@@ -1,6 +1,5 @@
 
 <script>
-
 	import { v4 as uuidv4 } from "uuid";
 	import Tailwind from "./components/Tailwind.svelte";
 	import Navbar from "./components/Navbar.svelte";
@@ -49,8 +48,6 @@
 	}
 
 	
-
-
 	function addToCart(event) {
 	  const selectedProdId = event.detail;
 	  const isAlreadyInCart = cartItems.findIndex(
@@ -67,17 +64,14 @@
 	}
 
 	window.addEventListener('load', function() {
-  if (typeof web3 !== 'undefined') {
-    console.log('web3 is enabled')
-    if (web3.currentProvider.isMetaMask === true) {
-      alert('MetaMask is active')
-    } else {
-      alert('MetaMask is not available')
-    }
-  } else {
-    alert('web3 is not found')
-  }
-})
+
+		if (typeof window.ethereum !== 'undefined') {
+			console.log("Metaamask is installed.");
+		}
+  
+	});
+
+
 
 
   </script>
