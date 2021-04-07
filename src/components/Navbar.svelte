@@ -66,7 +66,7 @@
       </nav>
     </div>
   </div>
-  <div class="flex flex-wrap right py-2  right-0">
+  <div class="py-2">
     <DButton/> 
   </div>
 

@@ -1,25 +1,10 @@
 <script>
-import { createEventDispatcher } from 'svelte';
-	
-const dispatch = createEventDispatcher();
 
 let account = "";
 let netv = "";
 
 
-async function getAccount() {
-   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-   const network_version = await ethereum.request({ method: 'net_version' });
-
-   if(network_version == 3) {
-        netv = "Ropstein Test Netwoek";
-   }
-
-   account = accounts[0];
-}
-
 async function sendEther() {
-    alert(getAccount);
     ethereum
         .request({
         method: 'eth_sendTransaction',
@@ -37,17 +22,24 @@ async function sendEther() {
         .catch((error) => console.error);
 }
 
+async function getAccount() {
+   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+   const network_version = await ethereum.request({ method: 'net_version' });
+
+   if(network_version == 3) {
+        netv = "Ropstein Test Network";
+   }
+
+   account = accounts[0];
+}
 
 </script>
 
-
-
-
-    <div class="max-w-lg w-full rounded-lg shadow-lg p-4">
-        <h3 class="font-semibold text-lg text-gray-700 tracking-wide">Create new account</h3>
+    <div class="max-w-lg rounded-lg shadow-lg p-4 float-right">
+        <div class="font-semibold text-md text-gray-700 tracking-wide">Connection</div>
             <ul>
-                <li><span class="text-sm">Account: <span>{ account }</span></span></li>
-                <li><span class="text-sm">Net Version: <span>{ netv }</span></span></li>
+                <li><span class="text-xs">Account: <span class="font-weight-700">{ account }</span></span></li>
+                <li><span class="text-xs">Net Version: <span class="font-weight-700">{ netv }</span></span></li>
             </ul>
         <div>
             <button class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" on:click={getAccount}>
@@ -56,5 +48,6 @@ async function sendEther() {
             <button class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" on:click={sendEther}>
                 Send Ethereum
             </button>
+            
         </div>
     </div>
