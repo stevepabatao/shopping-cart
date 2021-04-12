@@ -44,7 +44,7 @@ will create
 
 Add to rollup.config.js plusgins section
 
-```bash
+```javascript
 preprocess: sveltePreprocess({
        sourceMap: !production,
        postcss: {
@@ -57,7 +57,7 @@ preprocess: sveltePreprocess({
 
 Add this to App or create a seperate file and import it.
 
-```bash
+```html
 <style global lang="postcss">
     @tailwind base;
     @tailwind components;
@@ -126,7 +126,7 @@ Svelte by default does not support json and you will get errors if not configure
 
 Open rollup.config.js and insert the line inside the plugins section
 
-```bash
+```javascript
 plugins: [
 ---- some config here ----
        json(),
@@ -138,7 +138,7 @@ plugins: [
 
 To deploy using hardhat, update the hardhat.config.js and add the following.
 
-```bash
+```javascript
 require("@nomiclabs/hardhat-waffle");
 
 require("./tasks/faucet");
