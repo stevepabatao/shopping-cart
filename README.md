@@ -36,7 +36,7 @@ npm install tailwindcss postcss autoprefixer svelte-preprocess postcss-load-conf
 Make tailwind and post css config files.
 
 ```bash
-npm tailwindcss init -p
+npx tailwindcss init -p
 ```
 
 will create
@@ -49,9 +49,10 @@ Add to rollup.config.js plusgins section
 preprocess: sveltePreprocess({
        sourceMap: !production,
        postcss: {
-	plugins: [				         require('tailwindcss'),
+	plugins: [				         
+                require('tailwindcss'),
 	         require('autoprefixer'),
-	],
+	  ],
        },
 }),
 ```
