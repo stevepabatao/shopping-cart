@@ -84,7 +84,7 @@ To create an optimised version of the app:
 npm run build
 ```
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com) and [Netlify](https"//netlify.com).
+You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com) and [Netlify](https://netlify.com).
 
 ## How to deploy and run a smart contract for demo
 
@@ -168,6 +168,6 @@ npx hardhat run scripts/deploy.js --network ropsten
 Sample app running on netlify.
 
 ```bash
-https://pensive-meninsky-b81ade.netlify.app/
+[https://pensive-meninsky-b81ade.netlify.app/](https://pensive-meninsky-b81ade.netlify.app/)
 ```
 
