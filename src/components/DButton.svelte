@@ -17,6 +17,9 @@ let pollDataInterval = null;
 let provider = null; 
 let tokenData = null;
 
+let address = "";
+let amt = "";
+
 function initialize(userAddress) {
     // This method initializes the dapp
 
@@ -151,8 +154,10 @@ function initialize(userAddress) {
 
 
     try {
-      const to = '0xFfc3a2baBDC923f687EcE7192a6C6f08D05CE826';
-      const amount = 100;
+
+      const to = address;
+      const amount = amt;
+      alert(address + " - " + amt);
       // If a transaction fails, we save that error in the component's state.
       // We only save one such error, so before sending a second transaction, we
       // clear it.
@@ -229,9 +234,11 @@ function initialize(userAddress) {
         <div>
             <button class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" on:click={connectWallet}>
                 Enable Ethereum
-            </button>
+            </button><br/>
+            To : <input type="text"  id="address" name="address" size="50" placeholder="Enter desination address" bind:value={address}/><br/>
+            Amount : <input type="text"  id="amt" name="amt" size="3" placeholder="1" bind:value={amt}/><br/>
             <button class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" on:click={transferTokens}>
-                Send Ethereum
+                Send
             </button>
             
         </div>
