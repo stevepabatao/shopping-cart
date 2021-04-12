@@ -1,7 +1,8 @@
 
 # D'Cart 
 
-This is a cart example using svelte and tailwind, the DApp is made with ethers library.
+This is a cart example using svelte and tailwind, this sample code give an overview on how to use 
+the library to create a DApp,  ethers library was used to create a DApp.
 
 Clone the repository and run.
 
@@ -18,7 +19,7 @@ npm run dev
 ## How to install Tailwind and Svelte
 
 
-Installing tailwind and svelte
+### Installing tailwind and svelte
 
 Create the project and install
 ```bash
@@ -27,7 +28,7 @@ cd <project_name>
 npm install
 ```
 
-Install Dependencies
+### Install Dependencies
 ```bash
 npm install tailwindcss postcss autoprefixer svelte-preprocess postcss-load-config
 ```
@@ -55,7 +56,7 @@ preprocess: sveltePreprocess({
 }),
 ```
 
-Add this to App or create a seperate file and import it.
+Add this to the App or create a seperate file and import it.
 
 ```html
 <style global lang="postcss">
@@ -68,7 +69,6 @@ Add this to App or create a seperate file and import it.
 ```bash
 npm run dev
 ```
-#Enable json on the 
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
@@ -105,7 +105,7 @@ cd hardhat-hackathon-boilerplate/
 npx hardhat node
 ```
 
-Depoy the smart contract
+Deploy the smart contract
 
 ```bash
 npx hardhat --network localhost run scripts/deploy.js
@@ -122,7 +122,7 @@ Transferred 1 ETH and 100 tokens to 0x0987a41e73e69f60c5071ce3c8f7e730f9a60f90
 
 ## Some notes to consider
 
-Svelte by default does not support json and you will get errors if not configured. You need to activate json on rollup to run the application.
+Svelte by default does not support json and you will show errors if not configured. You need to activate json on rollup to run the application.
 
 Open rollup.config.js and insert the line inside the plugins section
 
