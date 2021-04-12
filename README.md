@@ -122,15 +122,15 @@ Transferred 1 ETH and 100 tokens to 0x0987a41e73e69f60c5071ce3c8f7e730f9a60f90
 
 ## Some notes to consider
 
-Svelte by default does not support json and you will get errors if not configured. You need to active json on rollup to run the application.
+Svelte by default does not support json and you will get errors if not configured. You need to activate json on rollup to run the application.
 
 Open rollup.config.js and insert the line inside the plugins section
 
 ```bash
 plugins: [
-
+---- some config here ----
        json(),
-
+---- some config here ----
 ]
 ```
 
