@@ -45,6 +45,12 @@ will create
 
 Add to rollup.config.js plusgins section
 
+Import the sveltePreprocess
+
+```javascript
+import sveltePreprocess from 'svelte-preprocess';
+```
+
 ```javascript
 preprocess: sveltePreprocess({
        sourceMap: !production,
@@ -168,6 +174,6 @@ npx hardhat run scripts/deploy.js --network ropsten
 Sample app running on netlify.
 
 ```bash
-[https://pensive-meninsky-b81ade.netlify.app/](https://pensive-meninsky-b81ade.netlify.app/)
+[https://pensive-meninsky-b81ade.netlify.app](https://pensive-meninsky-b81ade.netlify.app/)
 ```
 
